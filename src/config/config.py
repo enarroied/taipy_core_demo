@@ -1,7 +1,6 @@
 import taipy as tp
 from taipy.core.config import Config
 
-
 # Loading of the TOML
 Config.load("config/taipy-config.toml")
 
