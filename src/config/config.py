@@ -1,6 +1,6 @@
-from algorithms.add_wine_colors import add_wine_colors
-
 from taipy.core.config import Config
+
+from algorithms.add_wine_colors import add_wine_colors
 
 buying_price_node = Config.configure_csv_data_node(
     id="buying_price", default_path="data/wine_harvest_france_aoc_09_19.csv"

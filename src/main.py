@@ -1,9 +1,9 @@
-from page.page import page
-
 import taipy as tp
-from config.config import adding_color_scenario
 from taipy import Orchestrator
 from taipy.gui import Gui
+
+from config.config import adding_color_scenario
+from page.page import page
 
 if __name__ == "__main__":
     Orchestrator().run()
