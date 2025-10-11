@@ -1,0 +1,21 @@
+[TAIPY]
+
+[DATA_NODE.buying_price]
+storage_type = "csv"
+default_path = "data/wine_harvest_france_aoc_09_19.csv"
+
+[DATA_NODE.wine_production_with_colors]
+
+[TASK.add_wine_colors]
+function = "algorithms.add_wine_colors.add_wine_colors:function"
+inputs = [ "buying_price:SECTION",]
+outputs = [ "wine_production_with_colors:SECTION",]
+skippable = "False:bool"
+
+[SCENARIO.adding_color]
+tasks = [ "add_wine_colors:SECTION",]
+additional_data_nodes = []
+
+[SCENARIO.adding_color.comparators]
+
+[SCENARIO.adding_color.sequences]
