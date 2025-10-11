@@ -1,12 +1,7 @@
-from taipy.core.config import Config
-from config.config import df_wine_production
+import taipy.gui.builder as tgb
 
-
-page = """
-# Wine production by Region and Year
-
-
-## Data for all the regions:
-<|{df_wine_production}|table|height=400px|width=95%|>
-
-"""
+with tgb.Page as page:
+    tgb.text("# Wine production by Region and Year", mode="md")
+    tgb.html("hr")
+    tgb.text("## Data for all the regions:", mode="md")
+    tgb.table("{df_wine_production}")
