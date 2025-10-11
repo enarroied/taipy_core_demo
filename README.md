@@ -4,6 +4,10 @@
 ![License](https://img.shields.io/badge/License-MIT-blue.svg)
 ![Python Version](https://img.shields.io/badge/Python-3.11%2B-blue.svg)
 
+> **IMPORTANT** This is an old app I created for a Medium article introducing what was named Taipy Core, which is now refered to as Taipy Scenario Management.
+> The application was coded using Taipy 2.3. It uses the Markdown syntax as well for the GUI side.
+> **This application is totally obsolete**. I keep it in a separate branch for reference, but you probably want to take a look at the master branch for a minimal example of how to use Taiy Scenario Management.
+
 ## What is this app?
 
 This is a minimal app to test Taipy Core.
