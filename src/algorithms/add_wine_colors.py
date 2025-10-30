@@ -30,3 +30,13 @@ def add_wine_colors(df_wine):
     wine_with_colors["red_and_rose"] = _detect_wine_color(wine_type, aoc, "ROUGE")
     wine_with_colors["white"] = _detect_wine_color(wine_type, aoc, "BLANC")
     return wine_with_colors.drop(columns=["data_type", "wine_type"])
+
+
+def filter_by_color(df, color):
+    if color != "all":
+        df = df[df[color] == 1]
+    return df.copy()
+
+
+def calculate_season_average(df, season):
+    return round(df[season].mean(), 2)

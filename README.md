@@ -17,11 +17,11 @@ It intends to be a minimal example, and doesn't dive into the complex settings o
 
 File structure:
 
-* src
-  * config
-  * data
-  * page
-  * main.py
+- src
+  - config
+  - data
+  - page
+  - main.py
 
 ## Data sources
 
@@ -35,4 +35,4 @@ You can find the process I followed to create the CSV file [in my blog's article
 
 📚 I used this demo to write [a Medium article about how to use Taipy Core](https://medium.com/gitconnected/how-to-use-taipy-core-build-pipelines-for-better-applications-%EF%B8%8F-d40e5bc9aed3). 📚
 
-I used Taipy 2.3 to build it, but I upgraded the app ever since. The new app is different in many ways, so I decided to keep the original one in a branch called `old_version`.
+I used Taipy 2.3 to build it, but I upgraded the app ever since. The new app is different (has more elements, uses different application builders and configuration styles...), so I decided to keep the original one in a branch called `old_version`.
