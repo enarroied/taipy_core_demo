@@ -42,7 +42,10 @@ with tgb.Page() as page:
             label="select a season",
         )
         tgb.button(label="SUBMIT", on_action=submit_scenario, class_name="fullwidth")
-    tgb.text("### Average production: {average_production} hl", mode="md")
+    tgb.text(
+        "### Average production: {average_production} hl/ha average by region",
+        mode="md",
+    )
     tgb.html("hr")
     tgb.text("## Scenario Pipeline:", mode="md")
     tgb.scenario_dag("{scenario_wine}")

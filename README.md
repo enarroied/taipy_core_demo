@@ -15,19 +15,15 @@ This is an app that shows the essential elements of Taipy Scenario Management.
 
 It intends to be a minimal example, and doesn't dive into the complex settings of Scenario Management.
 
-File structure:
+The app uses a pipeline that reads a CSV file as a DataFrame, transforms it and calculates the average yield for a wine production season in France. It also filters on a particular wine color (red/rosé, white, or both).
 
-- src
-  - config
-  - data
-  - page
-  - main.py
+![pipeline's DAG](./img/scenario_pipeline.png)
 
 ## Data sources
 
 You can find the dataset [in my Kaggle page](https://www.kaggle.com/datasets/ericnarro/volumes-wine-production-aoc-2009-2019).
 
-The origincal source data is a [pdf file by France Agrimer](https://www.franceagrimer.fr/fam/content/download/62836/document/chiffres-fili%C3%A8re-viti-vinicole-2008-2018.pdf?version=).
+The original source data is a [pdf file by France Agrimer](https://www.franceagrimer.fr/fam/content/download/62836/document/chiffres-fili%C3%A8re-viti-vinicole-2008-2018.pdf?version=).
 
 You can find the process I followed to create the CSV file [in my blog's article about it](https://www.ericnarrodata.com/blog/2023/pdf_table_wine_production.html).
 
