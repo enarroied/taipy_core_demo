@@ -1,4 +1,4 @@
-from taipy.core.config import Config
+from taipy import Config
 
 from algorithms.add_wine_colors import (
     add_wine_colors,
