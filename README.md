@@ -23,6 +23,8 @@ The app uses a pipeline that reads a CSV file as a DataFrame, transforms it and 
 
 ## Video presentation
 
+> Warning: The video presentation has a mistake: the data does not show yield, but **total wine production, in thousand hectoliters**, instead. The application works exactly the same.
+
 [![app presentation](./img/presentation.png)](https://www.youtube.com/watch?v=FtUG5SYOiNE&t=27s)
 
 ## Running the App

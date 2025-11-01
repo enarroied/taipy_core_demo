@@ -15,27 +15,27 @@ default_path = "data/wine_harvest_france_aoc_09_19.csv"
 [DATA_NODE.average_production]
 
 [TASK.add_wine_colors]
-function = "algorithms.add_wine_colors.add_wine_colors:function"
+function = "algorithms.calculate_wine_yield.add_wine_colors:function"
 inputs = [ "buying_price:SECTION",]
 outputs = [ "wine_production_with_colors:SECTION",]
 skippable = "False:bool"
 
 [TASK.filter_by_color]
-function = "algorithms.add_wine_colors.filter_by_color:function"
+function = "algorithms.calculate_wine_yield.filter_by_color:function"
 inputs = [ "wine_production_with_colors:SECTION", "wine_color:SECTION",]
 outputs = [ "wine_production_filtered_by_color:SECTION",]
 skippable = "False:bool"
 
 [TASK.calculate_average]
-function = "algorithms.add_wine_colors.calculate_season_average:function"
+function = "algorithms.calculate_wine_yield.calculate_season_average:function"
 inputs = [ "wine_production_filtered_by_color:SECTION", "season:SECTION",]
 outputs = [ "average_production:SECTION",]
 skippable = "False:bool"
 
-[SCENARIO.adding_color]
+[SCENARIO.calculate_wine_yield]
 tasks = [ "add_wine_colors:SECTION", "filter_by_color:SECTION", "calculate_average:SECTION",]
 additional_data_nodes = []
 
-[SCENARIO.adding_color.comparators]
+[SCENARIO.calculate_wine_yield.comparators]
 
-[SCENARIO.adding_color.sequences]
+[SCENARIO.calculate_wine_yield.sequences]

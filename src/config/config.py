@@ -1,6 +1,6 @@
 from taipy import Config
 
-from algorithms.add_wine_colors import (
+from algorithms.calculate_wine_yield import (
     add_wine_colors,
     calculate_season_average,
     filter_by_color,
@@ -46,8 +46,8 @@ calculate_average_task = Config.configure_task(
 )
 
 # scenario:
-adding_color_scenario = Config.configure_scenario(
-    id="adding_color",
+calculate_wine_yield_scenario = Config.configure_scenario(
+    id="calculate_wine_yield",
     task_configs=[add_wine_colors_task, filter_by_color_task, calculate_average_task],
 )
 Config.export("./config/config.toml")

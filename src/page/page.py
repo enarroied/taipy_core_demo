@@ -43,7 +43,7 @@ with tgb.Page() as page:
         )
         tgb.button(label="SUBMIT", on_action=submit_scenario, class_name="fullwidth")
     tgb.text(
-        "### Average production: {average_production} hl/ha average by region",
+        "### Average production by region: {average_production} (in 1,000 hl)",
         mode="md",
     )
     tgb.html("hr")
