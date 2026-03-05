@@ -3,6 +3,9 @@
 [![Code style: black](https://img.shields.io/badge/code%20style-black-000000.svg)](https://github.com/psf/black)
 ![License](https://img.shields.io/badge/License-MIT-blue.svg)
 ![Python Version](https://img.shields.io/badge/Python-3.12%2B-blue.svg)
+[![Taipy](https://img.shields.io/badge/taipy-4.1.1-red.svg)](https://docs.taipy.io/en/latest/)
+[![codecov](https://codecov.io/github/enarroied/taipy_core_demo/branch/master/graph/badge.svg?token=HLZVB6WFMT)](https://codecov.io/github/enarroied/taipy_core_demo)
+![Tests](https://github.com/enarroied/taipy_core_demo/actions/workflows/tests.yml/badge.svg)
 
 - [TAIPY Scenario Management Minimal App](#taipy-scenario-management-minimal-app)
   - [What is this app?](#what-is-this-app)
