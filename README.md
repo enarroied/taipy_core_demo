@@ -10,7 +10,8 @@
 - [TAIPY Scenario Management Minimal App](#taipy-scenario-management-minimal-app)
   - [What is this app?](#what-is-this-app)
   - [Video presentation](#video-presentation)
-  - [Running the App](#running-the-app)
+    - [Run Locally](#run-locally)
+    - [Run with Docker](#run-with-docker)
   - [Data sources](#data-sources)
   - [Old Version of the App](#old-version-of-the-app)
 
@@ -30,13 +31,58 @@ The app uses a pipeline that reads a CSV file as a DataFrame, transforms it and 
 
 [![app presentation](./img/presentation.png)](https://www.youtube.com/watch?v=FtUG5SYOiNE&t=27s)
 
-## Running the App
 
-To run the app directly using `uv`, you can run the following command from the root directory:
+### Run Locally
+
+To run locally, you can use [`uv`](https://docs.astral.sh/uv/) to create a virtual environment and install dependencies from `pyproject.toml`:
+
+```bash
+uv venv
+uv pip install -r pyproject.toml
+```
+
+Then run the app:
+
+```bash
+cd src
+python main.py
+```
+
+Or, from the project root, directly with uv:
 
 ```bash
 uv run --directory src main.py
 ```
+
+### Run with Docker
+
+Build the Docker image:
+
+```bash
+docker build -t taipy_scenario_management_demo .
+```
+
+Run the container (mapping port 5000):
+
+```bash
+docker run -p 5000:5000 taipy_scenario_management_demo
+```
+
+You can then access the app at: http://localhost:5000
+
+**The Dockerfile:**
+
+- Uses Python 3.12 (Debian 12 slim) as the base.
+- Installs uv.
+- Copies pyproject.toml and uv.lock and installs dependencies at build time (not at runtime).
+- Runs as a non-root user (appuser) for better security.
+- Exposes port 5000 (default Taipy/Flask port).
+- Defines a healthcheck so Docker can monitor container health.
+- Runs the app with:
+
+  ```bash
+  taipy run --no-debug --no-reloader main.py -H 0.0.0.0 -P 5000
+  ```
 
 ## Data sources
 
